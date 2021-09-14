@@ -40,7 +40,7 @@ public:
         if (!skipVersion) {
             const auto version = read8();
             if (version != FORMAT_VERSION) {
-                THROW("Bad version number.");
+                THROW("Bad version number." + version + " | " + FORMAT_VERSION);
                 isInvalid = true;
             }
         }
