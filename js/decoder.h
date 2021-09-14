@@ -25,6 +25,7 @@ public:
     {
         const auto version = read8();
         if (version != FORMAT_VERSION) {
+            printf("Version number: %s", version);
             THROW("Bad version number.");
             isInvalid = true;
         }
